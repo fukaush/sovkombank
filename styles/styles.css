@@ -1,0 +1,243 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: 'PT Sans', sans-serif;
+}
+.wrap {
+    margin: 0 auto;
+    max-width: 960px;
+    min-width: 670px;
+}
+#app {
+    width: 100%;
+}
+input:focus {
+    outline: none;
+}
+.search-block .top {
+    background-image: -moz-linear-gradient( 0deg, rgb(130,179,229) 0%, rgb(168,213,233) 100%);
+    background-image: -webkit-linear-gradient( 0deg, rgb(130,179,229) 0%, rgb(168,213,233) 100%);
+    background-image: -ms-linear-gradient( 0deg, rgb(130,179,229) 0%, rgb(168,213,233) 100%);
+    max-height: 190px;
+    padding: 36px 19px;
+}
+.search-block .bottom {
+    display: flex;
+    padding: 15px 19px;
+    background-color: rgb(230, 242, 254);
+}
+.search-block .search-type {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+}
+.search-block .search-type__item {
+    color: #506981;
+    text-decoration: dotted;
+    text-decoration-line: underline;
+    text-decoration-color: inherit;
+}
+.search-block .search-type__item.active {
+    color: #adb9c4;
+    text-decoration: none;
+}
+.search-block .search-type__slider {
+    background-color: rgb(94, 153, 105);
+    border-radius: 10px;
+    height: 22px;
+    padding: 2px;
+    margin: 0 12px;
+    position: relative;
+    width: 40px;
+}
+.search-block .search-type__slider .search-type__slider-button.start {
+    left: 2px;
+}
+.search-block .search-type__slider .search-type__slider-button.end {
+    left: 20px;
+}
+.search-block .search-type__slider .search-type__slider-button {
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 3px 3px 0px rgba(0, 1, 1, 0.3);
+    height: 18px;
+    position: absolute;
+    width: 18px;
+}
+
+.search-block .line {
+    height: 44px;
+    display: flex;
+    align-items: stretch;
+}
+.search-block .line + .line {
+    margin: 30px 0 0;
+}
+.search-block .bottom {
+    height: 54px;
+}
+.search-block input {
+}
+.search-block .search-button {
+    border: none;
+    border-radius: 0 4px 4px 0;
+    background: #5e9969;
+    color: #fff;
+    cursor: pointer;
+    font-size: 20px;
+    padding: 0;
+    width: 130px;
+}
+.search-block .left-block {
+    width: 100%;
+}
+.search-block .search-filters {
+    display: flex;
+    height: 44px;
+}
+.search-block .search-filter + .search-filter {
+    border-radius: 0;
+    border-left: 1px #a3c6e8 solid
+}
+.search-block .search-filter {
+    border-radius: 4px 0 0 4px;
+}
+.search-block .dropdown:first-child:hover {
+    border-radius: 4px 0 0 0px;
+}
+.search-block .dropdown:last-child:hover {
+    border-radius: 0 4px 0 0px;
+}
+.search-block .dropdown {
+    background: #fff;
+    cursor: pointer;
+    line-height: 1;
+    font-size: 18px;
+    position: relative;
+    width: 100%;
+}
+.search-block .dropdown-item.selected {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='10px' height='6px'%3E%3Cpath fill-rule='evenodd' fill='rgb(99, 117, 140)' d='M-0.000,-0.000 L5.000,6.000 L10.000,-0.000 L-0.000,-0.000 Z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: calc(100% - 20px) center;
+}
+.search-block .dropdown-item {
+    padding: 13px 20px;
+}
+.search-block .dropdown-list {
+    background: #fff;
+    display: none;
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+}
+.search-block .dropdown:hover .dropdown-list {
+    display: block;
+}
+.search-block .dropdown-list .dropdown-item:hover {
+    background: #fbfbfb;
+}
+.search-block .currency-dropdown {
+    background: transparent;
+}
+.search-block .input {
+    height: 100%;
+    width: 100%;
+}
+.search-block input::placeholder {
+    color: #798590;
+}
+.search-block input {
+    color: #333333;
+    border: none;
+    padding: 0 20px;
+    font-size: 18px;
+    height: 100%;
+    width: 100%;
+}
+.search-block .input-search {
+    border-radius: 4px 0 0 4px;
+}
+.search-block .change-parameters__item {
+    display: flex;
+}
+.search-block .change-parameters__item .input + .input {
+    border-left: 1px #a3c6e8 solid;
+}
+.search-block .change-parameters__item .input:first-of-type {
+    border-radius: 4px 0 0 4px;
+}
+.search-block .change-parameters__item .input:last-of-type {
+    border-radius: 0 4px 4px 0;
+}
+.search-block .change-parameters__item .input.dropdown:last-of-type {
+    border-radius: 0 4px 4px 0;
+}
+.search-block .change-parameters__item .input.dropdown:last-of-type:hover {
+    border-radius: 0 4px 0 0;
+}
+.search-block .change-parameters__item .input {
+    background: #e6f2fe;
+}
+.search-block .change-parameters__item-type {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 55px;
+}
+.search-block .change-parameters__item-type sup {
+    font-size: 10px;
+}
+.search-block .line .separator {
+    margin: 0 10px;
+}
+.search-block .change-parameters-range .change-parameters__item {
+    width: calc((100%/5)*3);
+}
+.search-block .change-parameters-price .change-parameters__item {
+
+}
+.search-block .change-parameters__button {
+    color: #506981;
+    cursor: pointer;
+    border: 1px rgb(80, 105, 129) solid;
+    border-radius: 4px;
+    background-color: transparent;
+    font-size: 18px;
+    flex-grow: 1;
+    width: calc((100%/5)*2);
+}
+.search-block .change-parameters input {
+    background: transparent;
+}
+.search-block .change-parameters__item .size-range__type{
+    min-width: 55px;
+}
+
+.search-block .configuration {
+    display: flex;
+    margin-left: auto;
+}
+.search-block .configuration__item {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+}
+.search-block .configuration__item .bottom-icons {
+    background: url(../images/bottom-icons.png);
+    background-position: -5px;
+    width: 18px;
+    height: 26px;
+    margin: 0 10px 0 0;
+    display: block;
+}
+.search-block .configuration__item.active {
+    color: #adb9c4;
+}
+.search-block .configuration__item.active .bottom-icons {
+    background-position: -30px;
+}
+.search-block .configuration__item + .configuration__item {
+    margin: 0 0 0 24px;
+}
